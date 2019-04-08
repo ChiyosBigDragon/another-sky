@@ -26,13 +26,13 @@ def scrape(soup) :
                 file.write(src.content)
                 cnt += 1
 
-def main():
+def main() :
     # dataディレクトリ作成
-    if os.path.isdir('./data'):
+    if os.path.isdir('./data') :
         shutil.rmtree('./data')
     os.mkdir('./data')
     # URL生成
-    for page in range(1,26):
+    for page in range(1,26) :
         url = "http://www.ntv.co.jp/anothersky/fashion/index"
         if page > 1 :
             url += "_" + str(page)
@@ -43,5 +43,5 @@ def main():
         # スクレイピング
         scrape(soup)
 
-if __name__ == '__main__':
+if __name__ == '__main__' :
     main()
