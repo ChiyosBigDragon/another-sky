@@ -33,10 +33,10 @@ def main() :
     os.mkdir('./data')
     # URL生成
     for page in range(1,26) :
-        url = "http://www.ntv.co.jp/anothersky/fashion/index"
+        url = 'http://www.ntv.co.jp/anothersky/fashion/index'
         if page > 1 :
-            url += "_" + str(page)
-        url += ".html"
+            url += '_' + str(page)
+        url += '.html'
         res = requests.get(url)
         content = res.content
         soup = BeautifulSoup(content, 'html.parser')
